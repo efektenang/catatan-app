@@ -56,7 +56,7 @@ class NoteApp extends React.Component {
     render() {
         return (
             <div className='note-app'>
-                <NoteAppHeader name="Notes" onSearch={this.onSearchHandler} />
+                <NoteAppHeader name="Catatan" onSearch={this.onSearchHandler} />
                 <NoteAppBody notes={this.state.notes.filter((note) => note.archived === false).filter((note) => note.title.toLowerCase().includes(this.state.titleSearch.toLowerCase()))} archived={this.state.notes.filter((note) => note.archived === true)} onDelete={this.onDeleteHandler} onArchive={this.onArchiveHandler} onAdd={this.onAddNoteHandler} />
             </div>
         )
